@@ -12,8 +12,8 @@ class MoviesAdapter(private val movies : List<Movie>)
     : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>(){
 
     inner class MovieViewHolder(renglon: View) : RecyclerView.ViewHolder(renglon){
-        var titulo = renglon.findViewById<TextView>(R.id.titulo)
-        var anio = renglon.findViewById<TextView>(R.id.anio)
+        var titulo = renglon.findViewById<TextView>(R.id.nombre)
+        var anio = renglon.findViewById<TextView>(R.id.movie)
         var plot = renglon.findViewById<TextView>(R.id.plot)
         var foto = renglon.findViewById<ImageView>(R.id.foto)
     }

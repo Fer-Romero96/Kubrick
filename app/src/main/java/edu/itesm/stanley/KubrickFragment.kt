@@ -46,7 +46,7 @@ class KubrickFragment : Fragment() {
 
         actors.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_kubrickFragment_to_actorskFragment)
-        //Navigation.createNavigateOnClickListener(R.id.action_kubrickFragment_to_actorskFragment, null)
+            //Navigation.createNavigateOnClickListener(R.id.action_kubrickFragment_to_actorskFragment, null)
         }
     }
 

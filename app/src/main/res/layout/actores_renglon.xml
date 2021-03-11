@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MovieFragment">
+    android:layout_height="wrap_content"
+    android:id="@+id/card_movies"
+    card_view:cardBackgroundColor="#FFFF"
+    card_view:cardCornerRadius="8dp"
+    card_view:contentPadding="10dp"
+    android:foreground="?selectableItemBackground"
+    android:clickable="true">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/foto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:srcCompat="@mipmap/movies_round" />
+            card_view:srcCompat="@mipmap/movies_round" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
             android:orientation="vertical"
-            android:paddingLeft="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="titulo"
+                android:text="Nombre"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold" />
 
@@ -40,10 +41,9 @@
                 android:id="@+id/movie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="anio"
+                android:text="Pelicula"
                 android:textColor="@color/black"
                 android:textStyle="italic" />
-
             <TextView
                 android:id="@+id/plot"
                 android:layout_width="match_parent"
@@ -53,4 +53,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

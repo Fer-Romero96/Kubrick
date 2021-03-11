@@ -13,32 +13,29 @@ import kotlinx.android.synthetic.main.fragment_movie.*
 
 /**
  * A simple [Fragment] subclass.
- * Use the [MovieFragment.newInstance] factory method to
+ * Use the [ActorFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MovieFragment : Fragment() {
+class ActorFragment : Fragment() {
 
-    private val args by navArgs<MovieFragmentArgs>()
+    private val args by navArgs<ActorFragmentArgs>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_movie, container, false)
+        return inflater.inflate(R.layout.fragment_actor, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        foto.setImageResource(args.movie.picture)
-        nombre.text = args.movie.titulo
-        movie.text = args.movie.anio
-        plot.text = args.movie.plot
+        foto.setImageResource(args.actor.picture)
+        nombre.text = args.actor.name
+        movie.text = args.actor.movie
+        plot.text = args.actor.plot
 
     }
 }
